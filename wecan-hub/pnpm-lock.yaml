@@ -23,6 +23,9 @@ importers:
       react-dom:
         specifier: ^19.0.0
         version: 19.1.0(react@19.1.0)
+      react-hook-form:
+        specifier: ^7.57.0
+        version: 7.57.0(react@19.1.0)
       react-toastify:
         specifier: ^11.0.5
         version: 11.0.5(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
@@ -565,6 +568,12 @@ packages:
     peerDependencies:
       react: ^19.1.0
 
+  react-hook-form@7.57.0:
+    resolution: {integrity: sha512-RbEks3+cbvTP84l/VXGUZ+JMrKOS8ykQCRYdm5aYsxnDquL0vspsyNhGRO7pcH6hsZqWlPOjLye7rJqdtdAmlg==}
+    engines: {node: '>=18.0.0'}
+    peerDependencies:
+      react: ^16.8.0 || ^17 || ^18 || ^19
+
   react-toastify@11.0.5:
     resolution: {integrity: sha512-EpqHBGvnSTtHYhCPLxML05NLY2ZX0JURbAdNYa6BUkk+amz4wbKBQvoKQAB0ardvSarUBuY4Q4s1sluAzZwkmA==}
     peerDependencies:
@@ -1095,6 +1104,10 @@ snapshots:
     dependencies:
       react: 19.1.0
       scheduler: 0.26.0
+
+  react-hook-form@7.57.0(react@19.1.0):
+    dependencies:
+      react: 19.1.0
 
   react-toastify@11.0.5(react-dom@19.1.0(react@19.1.0))(react@19.1.0):
     dependencies:
