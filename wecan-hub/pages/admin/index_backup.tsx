@@ -194,11 +194,18 @@ export default function AdminDashboard() {
       toast.error('Failed to update pickup')
     }
   })
-
   if (loading) {
     return (
       <div className="min-h-screen flex items-center justify-center">
         <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-indigo-600"></div>
+      </div>
+    )
+  }
+
+  if (!user) {
+    return (
+      <div className="flex items-center justify-center min-h-screen">
+        <div className="text-lg">Please log in to access the admin dashboard</div>
       </div>
     )
   }
@@ -291,9 +298,9 @@ export default function AdminDashboard() {
 
               {/* Bins Tab */}
               <Tab.Panel className="rounded-xl bg-white p-6 shadow">
-                <h2 className="text-xl font-semibold mb-4">Bins Management</h2>
-                <div className="overflow-x-auto">
-                  <table className="min-w-full divide-y divide-gray-200">                    <thead className="bg-gray-50">
+                <h2 className="text-xl font-semibold mb-4">Bins Management</h2>                <div className="overflow-x-auto">
+                  <table className="min-w-full divide-y divide-gray-200">
+                    <thead className="bg-gray-50">
                       <tr>
                         <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Partner</th>
                         <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Location</th>

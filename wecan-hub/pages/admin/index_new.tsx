@@ -58,10 +58,9 @@ export default function AdminDashboard() {
     }
     return `https://your-domain.com/bins/${binId}/report`
   }
-
   const downloadQR = (binId: string, partnerName: string) => {
     // Create a temporary canvas to convert SVG to PNG
-    const svg = document.getElementById(`qr-${binId}`) as SVGElement
+    const svg = document.getElementById(`qr-${binId}`) as unknown as SVGElement
     if (svg) {
       const canvas = document.createElement('canvas')
       const ctx = canvas.getContext('2d')
