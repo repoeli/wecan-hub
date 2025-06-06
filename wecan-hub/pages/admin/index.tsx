@@ -292,6 +292,7 @@ export default function AdminDashboard() {
                                   })
                                 }}
                                 className="text-sm border-gray-300 rounded-md"
+                                aria-label="Change bin status"
                               >
                                 <option value="empty">Empty</option>
                                 <option value="full">Full</option>
@@ -351,6 +352,7 @@ export default function AdminDashboard() {
                                 state: e.target.value as Pickup['state']
                               })}
                               className="text-xs border-gray-300 rounded w-full"
+                              aria-label="Change pickup state"
                             >
                               <option value="queued">Queued</option>
                               <option value="assigned">Assigned</option>
