@@ -74,7 +74,13 @@ export default function Map() {
 
         if (error) throw error
 
-        setBins(data as Bin[])
+        // Transform data to match Bin interface (Partner should be a single object, not array)
+        const transformedData = data?.map(bin => ({
+          ...bin,
+          Partner: Array.isArray(bin.Partner) ? bin.Partner[0] : bin.Partner
+        })) || []
+
+        setBins(transformedData as Bin[])
       } catch (err) {
         console.error('Error fetching bins:', err)
         setError('Failed to load bin locations')
