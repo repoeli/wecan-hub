@@ -12,6 +12,3 @@ if (!supabaseAnonKey) {
 }
 
 export const supabase = createClient(supabaseUrl, supabaseAnonKey)
-
-// Example usage
-const { data, error } = await supabase.from('Partner').select('*')
